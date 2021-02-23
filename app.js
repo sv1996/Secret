@@ -87,7 +87,7 @@ passport.use(new GoogleStrategy({
 
 
   function(accessToken, refreshToken, profile, cb) {
-//    console.log(profile);
+    console.log(profile);
     User.findOrCreate({ googleId: profile.id }, function (err, user) {
       return cb(err, user);
     });
@@ -214,7 +214,7 @@ app.post("/login" , function(req , res){
 
 
 const port = process.env.PORT || 3000;
- app.get('/' , (req ,res) => res.send(process.env));
+
 
 app.listen(port, function(){
   console.log("Server has started Successfuly");
