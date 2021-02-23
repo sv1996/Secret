@@ -34,14 +34,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-//mongoose.connect("mongodb+srv://admin-shivam1:shivam1234@cluster0.lzz1f.mongodb.net/userDB" , {useNewUrlParser : true , useUnifiedTopology: true });
+mongoose.connect( "mongodb://localhost:27017/userDB" , {useNewUrlParser : true , useUnifiedTopology: true });
 //const url = 'mongodb://localhost:userDB';
 //mongoose.connect(url);
 //mongoose.connect( 'mongodb://secret1:bHE8EuHg91QWd2hrN18ByPRc4qHfFQXlLk4Oh1gdthAL9GmjyWo1GvfgfEbTe4IHA0DgHxYrGyg9Vp2xE9ijug==@secret1.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@secret1@'   || 'mongodb://localhost:27017/userDB', {useNewUrlParser: true});
 
-const url = 'mongodb://localhost:27017';
-mongoose.connect(url);
+
 
 const userSchema = new mongoose.Schema ({
   email: String ,
