@@ -35,6 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 mongoose.connect( "mongodb://localhost:27017/userDB" , {useNewUrlParser : true , useUnifiedTopology: true });
+// mongodb connection url
 //const url = 'mongodb://localhost:userDB';
 //mongoose.connect(url);
 //mongoose.connect( 'mongodb://secret1:bHE8EuHg91QWd2hrN18ByPRc4qHfFQXlLk4Oh1gdthAL9GmjyWo1GvfgfEbTe4IHA0DgHxYrGyg9Vp2xE9ijug==@secret1.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@secret1@'   || 'mongodb://localhost:27017/userDB', {useNewUrlParser: true});
